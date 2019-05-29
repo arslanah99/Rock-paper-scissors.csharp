@@ -1,0 +1,11 @@
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.csprojAssemblyReference.cache
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.csproj.CoreCompileInputs.cache
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.AssemblyInfoInputs.cache
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.AssemblyInfo.cs
+/home/lilbananahoodini/c#RPS/bin/Debug/netcoreapp2.2/c#RPS.deps.json
+/home/lilbananahoodini/c#RPS/bin/Debug/netcoreapp2.2/c#RPS.runtimeconfig.json
+/home/lilbananahoodini/c#RPS/bin/Debug/netcoreapp2.2/c#RPS.runtimeconfig.dev.json
+/home/lilbananahoodini/c#RPS/bin/Debug/netcoreapp2.2/c#RPS.dll
+/home/lilbananahoodini/c#RPS/bin/Debug/netcoreapp2.2/c#RPS.pdb
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.dll
+/home/lilbananahoodini/c#RPS/obj/Debug/netcoreapp2.2/c#RPS.pdb

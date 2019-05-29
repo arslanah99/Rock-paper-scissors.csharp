@@ -9,47 +9,57 @@
             int scorePlayer = 0;
             int scoreCPU = 0;
 
-            Console.WriteLine("Choose between, ROCK, PAPER and SCISSORS:    ");
-            inputPlayer = Console.ReadLine();
+            System.Console.WriteLine("Choose between, ROCK, PAPER and SCISSORS:    ");
+            inputPlayer = System.Console.ReadLine();
             inputPlayer = inputPlayer.ToUpper();
 
-            Random rnd = new Random();
+            System.Random rnd = new System.Random();
 
             randomInt = rnd.Next(1, 4);
 
             switch (randomInt){
                 case 1:
                     inputCPU = "ROCK";
-                    Console.WriteLine("Computer chose ROCK!");
+                    System.Console.WriteLine("Computer chose ROCK!");
                     if(inputPlayer == "ROCK"){
-                        Console.WriteLine("DRAW!!!!!\n\n");
+                        System.Console.WriteLine("DRAW!!!!!\n\n");
                     } else if (inputPlayer == "PAPER"){
-                        Console.WriteLine("PLAYER WINS!!!!\n\n");
+                        System.Console.WriteLine("PLAYER WINS!!!!\n\n");
                         scorePlayer++;
                     } else if(inputPlayer == "SCISSORS"){
-                        Console.WriteLine("CPU WINS!!!!!\n\n");
+                        System.Console.WriteLine("CPU WINS!!!!!\n\n");
                         scoreCPU++;
                     }
                     break;
                 case 2:
                     inputCPU = "PAPER";
-                    Console.WriteLine("Computer chose PAPER!");
+                    System.Console.WriteLine("Computer chose PAPER!");
                     if(inputPlayer == "PAPER"){
-                        Console.WriteLine("DRAW!!!!!\n\n");
+                        System.Console.WriteLine("DRAW!!!!!\n\n");
                     } else if (inputPlayer == "SCISSORS"){
-                        Console.WriteLine("PLAYER WINS!!!!\n\n");
+                        System.Console.WriteLine("PLAYER WINS!!!!\n\n");
                         scorePlayer++;
                     } else if(inputPlayer == "ROCK"){
-                        Console.WriteLine("CPU WINS!!!!!\n\n");
+                        System.Console.WriteLine("CPU WINS!!!!!\n\n");
                         scoreCPU++;
                     }
                     break;
                 case 3:
                     inputCPU = "SCISSORS";
-                    Console.WriteLine("Computer chose SCISSORS!");
+                    System.Console.WriteLine("Computer chose SCISSORS!");
+
+                    if(inputPlayer == "SCISSORS"){
+                        System.Console.WriteLine("DRAW!!!!!\n\n");
+                    } else if (inputPlayer == "PAPER"){
+                        System.Console.WriteLine("PLAYER WINS!!!!\n\n");
+                        scorePlayer++;
+                    } else if(inputPlayer == "ROCK"){
+                        System.Console.WriteLine("CPU WINS!!!!!\n\n");
+                        scoreCPU++;
+                    }
                     break;
                 default:
-                    Console.WriteLine("Invalid entry");
+                    System.Console.WriteLine("Invalid entry");
                     break;
             }
         }

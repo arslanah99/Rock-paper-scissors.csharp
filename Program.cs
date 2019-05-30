@@ -1,4 +1,6 @@
-﻿namespace ROCKPAPERSCISSORS
+﻿using System;
+
+namespace ROCKPAPERSCISSORS
 {
     class Program
     {
@@ -17,12 +19,12 @@
                 while (scorePlayer < 3 && scoreCPU < 3)
                 {
 
-
-                    System.Console.WriteLine("Choose between, ROCK, PAPER and SCISSORS:    ");
-                    inputPlayer = System.Console.ReadLine();
+                        
+                    Console.WriteLine("Choose between, ROCK, PAPER and SCISSORS:    ");
+                    inputPlayer = Console.ReadLine();
                     inputPlayer = inputPlayer.ToUpper();
 
-                    System.Random rnd = new System.Random();
+                    Random rnd = new Random();
 
                     randomInt = rnd.Next(1, 4);
 
@@ -30,84 +32,84 @@
                     {
                         case 1:
                             inputCPU = "ROCK";
-                            System.Console.WriteLine("Computer chose ROCK!");
+                            Console.WriteLine("Computer chose ROCK!");
                             if (inputPlayer == "ROCK")
                             {
-                                System.Console.WriteLine("DRAW!!!!!\n\n");
+                                Console.WriteLine("DRAW!!!!!\n\n");
                             }
                             else if (inputPlayer == "PAPER")
                             {
-                                System.Console.WriteLine("PLAYER WINS!!!!\n\n");
+                                Console.WriteLine("PLAYER WINS!!!!\n\n");
                                 scorePlayer++;
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
-                                System.Console.WriteLine("CPU WINS!!!!!\n\n");
+                                Console.WriteLine("CPU WINS!!!!!\n\n");
                                 scoreCPU++;
                             }
                             break;
                         case 2:
                             inputCPU = "PAPER";
-                            System.Console.WriteLine("Computer chose PAPER!");
+                            Console.WriteLine("Computer chose PAPER!");
                             if (inputPlayer == "PAPER")
                             {
-                                System.Console.WriteLine("DRAW!!!!!\n\n");
+                                Console.WriteLine("DRAW!!!!!\n\n");
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
-                                System.Console.WriteLine("CPU WINS!!!!\n\n");
+                                Console.WriteLine("CPU WINS!!!!\n\n");
                                 scoreCPU++;
                             }
                             else if (inputPlayer == "ROCK")
                             {
-                                System.Console.WriteLine("PLAYER WINS!!!!!\n\n");
+                                Console.WriteLine("PLAYER WINS!!!!!\n\n");
                                 scorePlayer++;
                             }
                             break;
                         case 3:
                             inputCPU = "SCISSORS";
-                            System.Console.WriteLine("Computer chose SCISSORS!");
+                            Console.WriteLine("Computer chose SCISSORS!");
 
                             if (inputPlayer == "SCISSORS")
                             {
-                                System.Console.WriteLine("DRAW!!!!!\n\n");
+                                Console.WriteLine("DRAW!!!!!\n\n");
                             }
                             else if (inputPlayer == "PAPER")
                             {
-                                System.Console.WriteLine("CPU WINS!!!!\n\n");
+                                Console.WriteLine("CPU WINS!!!!\n\n");
                                 scoreCPU++;
                             }
                             else if (inputPlayer == "ROCK")
                             {
-                                System.Console.WriteLine("PLAYER WINS!!!!!\n\n");
+                                Console.WriteLine("PLAYER WINS!!!!!\n\n");
                                 scorePlayer++;
                             }
                             break;
                         default:
-                            System.Console.WriteLine("Invalid entry");
+                            Console.WriteLine("Invalid entry");
                             break;
                     }
 
-                    System.Console.WriteLine("\n\nSCORES:\tPLAYER:\t{0}\tCPU:\t{1}", scorePlayer, scoreCPU);
+                    Console.WriteLine("\n\nSCORES:\tPLAYER:\t{0}\tCPU:\t{1}", scorePlayer, scoreCPU);
                 }
                 if (scorePlayer == 3)
                 {
-                    System.Console.WriteLine("PLAYER WON!");
+                    Console.WriteLine("PLAYER WON!");
                 }
                 else if (scoreCPU == 3)
                 {
-                    System.Console.WriteLine("CPU WON!");
+                    Console.WriteLine("CPU WON!");
                 }
                 else
                 {
 
                 }
-                System.Console.WriteLine("Do you want to play again?(y/n)");
-                string loop = System.Console.ReadLine();
+                Console.WriteLine("Do you want to play again?(y/n)");
+                string loop = Console.ReadLine();
                 if (loop == "y")
                 {
                     playAgain = true;
-                    System.Console.Clear();
+                    Console.Clear();
                 }
                 else if (loop == "n")
                 {
@@ -115,7 +117,7 @@
                 }
                 else if (loop != "n" || loop != "y")
                 {
-                    System.Console.WriteLine("Invalid Entry please start game again!");
+                    Console.WriteLine("Invalid Entry please start game again!");
                     playAgain = false;
                 }
             }

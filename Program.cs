@@ -6,8 +6,15 @@
         {
             string inputPlayer, inputCPU;
             int randomInt;
+
+            bool playAgain = true;
+
+            while(playAgain){
             int scorePlayer = 0;
             int scoreCPU = 0;
+
+            while(scorePlayer < 3 && scoreCPU < 3){
+
 
             System.Console.WriteLine("Choose between, ROCK, PAPER and SCISSORS:    ");
             inputPlayer = System.Console.ReadLine();
@@ -37,11 +44,11 @@
                     if(inputPlayer == "PAPER"){
                         System.Console.WriteLine("DRAW!!!!!\n\n");
                     } else if (inputPlayer == "SCISSORS"){
-                        System.Console.WriteLine("PLAYER WINS!!!!\n\n");
-                        scorePlayer++;
-                    } else if(inputPlayer == "ROCK"){
-                        System.Console.WriteLine("CPU WINS!!!!!\n\n");
+                        System.Console.WriteLine("CPU WINS!!!!\n\n");
                         scoreCPU++;
+                    } else if(inputPlayer == "ROCK"){
+                        System.Console.WriteLine("PLAYER WINS!!!!!\n\n");
+                        scorePlayer++;
                     }
                     break;
                 case 3:
@@ -51,16 +58,35 @@
                     if(inputPlayer == "SCISSORS"){
                         System.Console.WriteLine("DRAW!!!!!\n\n");
                     } else if (inputPlayer == "PAPER"){
-                        System.Console.WriteLine("PLAYER WINS!!!!\n\n");
-                        scorePlayer++;
-                    } else if(inputPlayer == "ROCK"){
-                        System.Console.WriteLine("CPU WINS!!!!!\n\n");
+                        System.Console.WriteLine("CPU WINS!!!!\n\n");
                         scoreCPU++;
+                    } else if(inputPlayer == "ROCK"){
+                        System.Console.WriteLine("PLAYER WINS!!!!!\n\n");
+                        scorePlayer++;
                     }
                     break;
                 default:
                     System.Console.WriteLine("Invalid entry");
                     break;
+            }
+        }
+        if(scorePlayer == 3){
+            System.Console.WriteLine("PLAYER WON!");
+        } else if(scoreCPU == 3){
+            System.Console.WriteLine("CPU WON!");
+        } else{
+
+        }
+        System.Console.WriteLine("Do you want to play again?(y/n)");
+        string loop = System.Console.ReadLine();
+        if(loop == "y"){
+            playAgain = true;
+                    } else if(loop == "n"){
+                        playAgain = false;
+                    } else if(loop != "n" || loop != "y") {
+                        System.Console.WriteLine("Invalid Entry please start game again!");
+                        playAgain = false;
+                    }
             }
         }
     }
